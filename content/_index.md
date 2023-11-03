@@ -19,9 +19,9 @@ sections:
       # Need a custom icon?
       # Add an SVG image to the `assets/media/icons/` folder and reference it in the `icon` field below
       buttons:
-        - title: Read my latest paper on LLMs
-          icon: arxiv
-          url: https://arxiv.org/abs/2304.01852
+        - title: Read my Red
+          icon: redbook
+          url: https://www.xiaohongshu.com/user/profile/54e70b96a46e960adeb4b8bb
         - title: Watch my new YouTube video to achieve 20x productivity
           icon: youtube
           url: https://youtube.com
