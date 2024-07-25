@@ -157,8 +157,7 @@ public int[][] merge(int[][] intervals) {
 ```
 
 ### 27. Remove Element
-[题目]((https://leetcode.com/problems/remove-element/description/)
-)：移除数组中的指定大小为val的元素，并返回其余元素数量。
+[题目](https://leetcode.com/problems/remove-element/description/)：移除数组中的指定大小为val的元素，并返回其余元素数量。
 
 **分析**：这道题的答案判定方法比较简单，返回k为非val的元素数量，并检查数组的前k个元素。所以k之后的元素不用处理。
 
