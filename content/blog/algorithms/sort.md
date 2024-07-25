@@ -1,12 +1,12 @@
 ---
-title: 算法——排序篇
-summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
-date: 2024-06-26
+title: 算法（一） —— 链表
+summary: 
+date: 2024-07-25
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
+  caption: 'title-sort.jpg'
 
 authors:
   - jocelyn
@@ -15,19 +15,15 @@ tags:
   - Algorithm
 ---
 
-|  算法   | 题号  |
-|  ----  | ----  |
-| 排序  | [148. Sort List：链表生序排列 / 链表归并排序](#148-sort-list) <br> [56. Merge Intervals：合并重叠区域](#56-merge-intervals-medium) <br>  [27. Remove elements](#27-remove-element)<br> [179. Largest Number](#179-largest-number)<br> [75. Sort Colors](#75-sort-colors)<br> [215. Kth Largest Element](#215-kth-largest-element) <br> [4. Median of Two Sorted Arrays](#4-median-of-two-sorted-arrays) |
-
 
 {{< toc mobile_only=true is_open=true >}}
 
 
-## 排序
+## Sort
 
-### [148. Sort List (Medium)](https://leetcode.com/problems/sort-list/description/)
+### 148. Sort List (Medium)
 
-链表升序排序
+[题目](https://leetcode.com/problems/sort-list/description/)：链表升序排序
 
 Given the head of a linked list, return the list after sorting it in ascending order.
 
@@ -92,9 +88,9 @@ public ListNode sortList(ListNode head) {
     }
 ```
 
-### [56. Merge Intervals (Medium)](https://leetcode.com/problems/merge-intervals/description/)
+### 56. Merge Intervals (Medium)
 
-很经典的面试题，合并重叠区间
+[题目]((https://leetcode.com/problems/merge-intervals/description/))：很经典的面试题，合并重叠区间
 
 **Example 1:**
 
@@ -160,9 +156,9 @@ public int[][] merge(int[][] intervals) {
 }
 ```
 
-### [27. Remove Element](https://leetcode.com/problems/remove-element/description/)
-
-移除数组中的指定大小为val的元素，并返回其余元素数量。
+### 27. Remove Element
+[题目]((https://leetcode.com/problems/remove-element/description/)
+)：移除数组中的指定大小为val的元素，并返回其余元素数量。
 
 **分析**：这道题的答案判定方法比较简单，返回k为非val的元素数量，并检查数组的前k个元素。所以k之后的元素不用处理。
 
@@ -180,9 +176,9 @@ public int removeElement(int[] nums, int val) {
     }
 ```
 
-### [179. Largest Number](https://leetcode.com/problems/largest-number/description/)
+### 179. Largest Number
 
-给定一串非负整数，以字符串输出能拼接出的最大数。
+[题目](https://leetcode.com/problems/largest-number/description/)：给定一串非负整数，以字符串输出能拼接出的最大数。
 
 **Example:**
 
@@ -223,9 +219,9 @@ public String largestNumber(int[] nums) {
     }
 ```
 
-### [75. Sort Colors](https://leetcode.com/problems/sort-colors/description/)
+### 75. Sort Colors
 
-对给定数组进行排序，数组中只有0，1，2三种数字分别对应红白蓝三种颜色。
+[题目](https://leetcode.com/problems/sort-colors/description/)：对给定数组进行排序，数组中只有0，1，2三种数字分别对应红白蓝三种颜色。
 
 **Example:**
 
@@ -258,9 +254,9 @@ public void sortColors(int[] nums) {
     }
 ```
 
-### [215. Kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+### 215. Kth Largest Element
 
-寻找给定数组中的第K大数字。要求不对数组进行完全排序。
+[题目](https://leetcode.com/problems/kth-largest-element-in-an-array/)：寻找给定数组中的第K大数字。要求不对数组进行完全排序。
 
 **解法一：基于快排的思路，partition**
 
@@ -327,9 +323,9 @@ public int findKthLargest(int[] nums, int k) {
     }
 ```
 
-### [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
-
-对两个有序数组，找中位数。
+### 4. Median of Two Sorted Arrays
+[题目](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+：对两个有序数组，找中位数。
 
 **思路：开辟新的大小为m+n的数组，将两个有序数组依次放入，之后根据m+n的奇偶性取中位数**
 
