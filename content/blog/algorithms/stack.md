@@ -1,7 +1,7 @@
 ---
 title: 算法（四） —— Stack
-summary: 
-date: 2024-07-25
+summary: Stack
+date: 2024-05-25
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
