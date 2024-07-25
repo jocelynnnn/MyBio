@@ -90,7 +90,7 @@ public ListNode sortList(ListNode head) {
 
 ### 56. Merge Intervals (Medium)
 
-[题目]((https://leetcode.com/problems/merge-intervals/description/))：很经典的面试题，合并重叠区间
+[题目](https://leetcode.com/problems/merge-intervals/description/)：很经典的面试题，合并重叠区间
 
 **Example 1:**
 
