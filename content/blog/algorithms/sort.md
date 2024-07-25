@@ -1,5 +1,5 @@
 ---
-title: 算法————排序篇
+title: 算法——排序篇
 summary: Take full control of your personal brand and privacy by migrating away from the big tech platforms!
 date: 2024-06-26
 
