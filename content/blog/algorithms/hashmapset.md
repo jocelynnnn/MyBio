@@ -234,3 +234,33 @@ class RandomizedSet {
     }
 }
 ```
+
+### Leetcode 49. Group Anagrams
+[题目](https://leetcode.com/problems/group-anagrams/description/)：给定一个字符串数组strs，将构成相同的字符串组合在一起。<br>
+Example 1:<br>
+Input: strs = ["eat","tea","tan","ate","nat","bat"]<br>
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+<br>
+**思路：这道题要对字符串数组进行分类，也就是说我们需要知道当前字符串应该被放到第几类中。那么我们可以用一个map，记录每一个分类包含的字母，及其在第几类中（index）。 接下来只要对每一个字符串，判断它属于哪个类别。<br>判断方法，这里使用的是对字符串中的每个字符进行字典序排序，然后直接比较排序后的字符串是否相等即可。**
+<br>代码如下：
+```java
+public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String,Integer> map = new HashMap<>();
+        List<List<String>> res = new ArrayList<>();
+
+        for (String s: strs){
+            char[] cs = s.toCharArray();
+            Arrays.sort(cs);
+            String newS = new String(cs);
+            if(!map.containsKey(newS)){
+                List<String> cur = new ArrayList<>();
+                cur.add(s);
+                res.add(cur);
+                map.put(newS,res.size()-1);
+            }else{
+                res.get(map.get(newS)).add(s);
+            }
+        }
+        return res;
+    }
+```
