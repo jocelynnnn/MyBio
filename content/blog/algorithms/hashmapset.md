@@ -264,3 +264,37 @@ public List<List<String>> groupAnagrams(String[] strs) {
         return res;
     }
 ```
+
+### 350. Intersection of Two Arrays II
+[题目](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)：
+给定两个整型数组，找到两个数组的重复部分。<br>
+**分析：数组内的数是可以重复的，因此可以用一个HashMap来记录数字出现的次数。**<br>
+```java
+public int[] intersect(int[] nums1, int[] nums2) {
+        Map<Integer,Integer> map = new HashMap<>();
+        List<Integer> result = new ArrayList<>();
+
+        for (int i=0; i<nums1.length; i++){
+            if (map.containsKey(nums1[i])){
+                map.put(nums1[i],map.get(nums1[i])+1);
+            }else{
+                map.put(nums1[i],1);
+            }
+        }
+        for (int i=0; i<nums2.length; i++){
+            if(map.containsKey(nums2[i])){
+                result.add(nums2[i]);
+                if(map.get(nums2[i])==1){
+                    map.remove(nums2[i]);
+                }else{
+                    map.put(nums2[i],map.get(nums2[i])-1);
+                }
+            }
+        }
+        int[] a = new int[result.size()];
+        for (int i=0; i<result.size();i++){
+            a[i] = result.get(i);
+        }
+        return a;
+    }
+```
