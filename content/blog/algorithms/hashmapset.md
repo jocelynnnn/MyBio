@@ -298,3 +298,46 @@ public int[] intersect(int[] nums1, int[] nums2) {
         return a;
     }
 ```
+
+### Leetcode 299. Bulls and Cows
+给定两个字符串形式的数字，计算其中的bull和cow数量。<br>bull：数字相同且下标相同的数字个数。<br>cow：数字相同但下标不同的数字个数。
+<br>**分析：这道题比较清晰，就是用HashMap记录数字出现的次数，当数字出现的下标相同时，不计入HashMap。**
+```java
+public String getHint(String secret, String guess) {
+        char[] secretArr = secret.toCharArray();
+        char[] guessArr = guess.toCharArray();
+
+        HashMap<Character,Integer> map = new HashMap<>();
+        HashSet<Integer> set = new HashSet<>();
+        int bullNum = 0;
+        int cowNum = 0;
+        for (int i=0; i<secretArr.length; i++){
+            if (guessArr.length > i && secretArr[i] == guessArr[i]){
+                bullNum ++;
+                set.add(i);
+                continue;
+            }
+            if (map.containsKey(secretArr[i])){
+                map.put(secretArr[i],map.get(secretArr[i])+1);
+            }else{
+                map.put(secretArr[i],1);
+            }
+        }
+        for (int i=0; i<guessArr.length; i++){
+            if (set.contains(i)){
+                continue;
+            }else{
+                if (map.containsKey(guessArr[i])){
+                    cowNum++;
+                    if (map.get(guessArr[i]) > 1 ){
+                        map.put(guessArr[i],map.get(guessArr[i])-1);
+                        
+                    }else{
+                        map.remove(guessArr[i]);
+                    }
+                }
+            }
+        }
+        return bullNum +"A" +cowNum +"B";
+    }
+```
