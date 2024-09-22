@@ -33,7 +33,7 @@ profiles:
   - icon: at-symbol
     url: 'mailto:jocelyn.j.m.gomez@gmail.com'
     label: E-mail Me
-  - icon: custom/redbook
+  # - icon: custom/redbook
     # url: https://www.xiaohongshu.com/user/profile/54e70b96a46e960adeb4b8bb
   # - icon: brands/x
   #   url: https://twitter.com/GetResearchDev
