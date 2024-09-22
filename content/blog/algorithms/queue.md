@@ -1,7 +1,7 @@
 ---
 title: 算法（三） —— 队列
 summary: Queue
-date: 2024-03-25
+date: 2023-12-25
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.

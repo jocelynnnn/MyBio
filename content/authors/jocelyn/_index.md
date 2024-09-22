@@ -39,15 +39,14 @@ profiles:
   #   url: https://twitter.com/GetResearchDev
   # - icon: brands/instagram
   #   url: https://www.instagram.com/
-  # - icon: brands/linkedin
-  #   url: https://www.linkedin.com/
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/jinyu-ma-jocelyn/
   # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
   # - icon: academicons/cv
   #   url: uploads/resume.pdf
   #   label: Download my resume
-  # - icon: rss
-  #   url: ./post/index.xml
-  #   label: Subscribe to my blog via RSS feed
+  - icon: brands/github
+    url: https://github.com/JJMGomez
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true

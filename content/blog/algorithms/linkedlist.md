@@ -1,7 +1,7 @@
 ---
 title: 算法（二） —— 链表
 summary: LinkedList
-date: 2024-02-25
+date: 2023-08-25
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.

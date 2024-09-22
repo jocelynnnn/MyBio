@@ -1,7 +1,7 @@
 ---
 title: 算法（一） —— 排序
 summary: Sort
-date: 2024-01-25
+date: 2023-01-25
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
