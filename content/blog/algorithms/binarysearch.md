@@ -31,14 +31,12 @@ Output: [3,4]<br>
 ```java
 //先通过二分查找找到指定元素，再分别往前和往后找。
     public int[] searchRange(int[] nums, int target) {
-        
         int left = 0;
         int right = nums.length-1;
         int res_left = -1;
         int res_right = -1;
-        int cur = -1;
         while(left<=right){
-            cur = (left + right)/2;
+            int cur = (left + right)/2;
             if (nums[cur]==target){
                 res_left = cur;
                 res_right = cur;
@@ -59,5 +57,37 @@ Output: [3,4]<br>
         }
         return new int[]{res_left,res_right};
     }
-
+```
+```java
+//minimum & maximum binary search
+    public int[] searchRange(int[] nums, int target) {
+        int[] result = {-1, -1};
+        int left = binarySearch(nums, target, true);
+        int right = binarySearch(nums, target, false);
+        result[0] = left;
+        result[1] = right;
+        return result;        
+    }
+    private int binarySearch(int[] nums, int target, boolean isSearchingLeft) {
+        int left = 0;
+        int right = nums.length - 1;
+        int idx = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            
+            if (nums[mid] > target) {
+                right = mid - 1;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                idx = mid;
+                if (isSearchingLeft) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            }
+        }
+        return idx;
+    }
 ```
