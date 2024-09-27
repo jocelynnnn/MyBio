@@ -1,5 +1,5 @@
 ---
-title: 算法（三） —— 队列
+title: 算法（三） —— Queue
 summary: Queue
 date: 2023-12-25
 
