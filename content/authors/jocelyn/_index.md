@@ -45,8 +45,8 @@ profiles:
   # - icon: academicons/cv
   #   url: uploads/resume.pdf
   #   label: Download my resume
-  # - icon: brands/github
-  #   url: https://github.com/JJMGomez
+  - icon: brands/github
+    url: https://github.com/JJMGomez
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
